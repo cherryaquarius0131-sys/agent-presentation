@@ -3,10 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>AI 繪圖著作權與商用規範入門</title>
-    <!-- 引入 Reveal.js 簡報框架的 CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/dracula.min.css">
+    <!-- 使用更穩定的 jsdelivr CDN，確保樣式正確載入 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/dracula.css">
+
+    <!-- 加入自訂樣式，強制放大字體、增加行距，讓排版更美觀 -->
+    <style>
+        .reveal h2, .reveal h3 {
+            font-family: 'Noto Sans TC', '微軟正黑體', sans-serif !important;
+            text-transform: none !important;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+        .reveal p, .reveal li {
+            font-family: 'Noto Sans TC', '微軟正黑體', sans-serif !important;
+            font-size: 1.1em !important; /* 放大字體 */
+            line-height: 1.6 !important; /* 增加行距，避免擁擠 */
+            text-align: left;
+        }
+        .highlight-box {
+            background: rgba(255, 87, 34, 0.2);
+            padding: 20px;
+            border-left: 5px solid #FF5722;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        .slide-content {
+            width: 90%;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <div class="reveal">
@@ -14,55 +43,25 @@
             <!-- 第一頁：封面 -->
             <section>
                 <h2>AI 繪圖的著作權與商用規範</h2>
-                <p>一堂課搞懂 Midjourney 與 Stable Diffusion 的法律界線</p>
-                <small>製作人：NCU EE AI Agent</small>
+                <p style="text-align: center; color: #00E5FF; font-size: 1.2em !important;">一堂課搞懂 Midjourney 與 Stable Diffusion 的法律界線</p>
+                <p style="text-align: center; font-size: 0.8em !important; color: #aaa; margin-top: 50px;">製作人：NCU EE AI Agent</p>
             </section>
 
             <!-- 第二頁：核心概念 -->
             <section>
-                <h3>💡 核心概念：AI 產出的圖有版權嗎？</h3>
-                <p style="text-align: left; font-size: 0.8em;">根據多數智財局見解，單純由 AI 自動生成的圖像，因缺乏<strong>「人類精神創作」</strong>，通常無法取得著作權保護。</p>
-                <div style="background: rgba(255,0,0,0.2); padding: 10px; border-radius: 5px;">
-                    ⚠️ 結論：任何人皆可自由使用不受保護的純 AI 生成圖，但你也無法阻止別人盜用。
+                <div class="slide-content">
+                    <h3>💡 AI 產出的圖有版權嗎？</h3>
+                    <p>根據多數智財局見解，單純由 AI 自動生成的圖像，因缺乏<strong>「人類精神創作」</strong>，通常無法取得著作權保護。</p>
+                    <div class="highlight-box">
+                        ⚠️ 結論：任何人皆可自由使用不受保護的純 AI 生成圖，但你也無法阻止別人盜用。
+                    </div>
                 </div>
             </section>
 
             <!-- 第三頁：Midjourney 規範 -->
             <section>
-                <h3>🎨 Midjourney 商用規範</h3>
-                <ul style="font-size: 0.8em;">
-                    <li><strong>免費方案 (Free Tier)：</strong> <br>不可商用！適用 CC BY-NC 4.0 授權，須標註原創作者。</li>
-                    <li><strong>付費方案 (Pro/Standard)：</strong> <br>擁有完整商業使用權（可印製商品、做廣告素材）。</li>
-                    <li><strong>企業條款：</strong> <br>若公司年營收超過 100 萬美元，強制要求購買 Pro 以上方案。</li>
-                </ul>
-            </section>
-
-            <!-- 第四頁：Stable Diffusion 規範 -->
-            <section>
-                <h3>⚙️ Stable Diffusion 開源規範</h3>
-                <ul style="font-size: 0.8em;">
-                    <li>官方聲明：模型為開源，生成的圖像完全歸使用者所有，官方不主張任何權利。</li>
-                    <li><strong>潛在風險：</strong> 使用者必須自行承擔圖像內容是否侵犯他人（如知名畫家畫風、迪士尼 IP 角色）版權的法律風險。</li>
-                </ul>
-            </section>
-
-            <!-- 第五頁：結語 -->
-            <section>
-                <h3>⚖️ 創作者自保指南</h3>
-                <p>若希望 AI 輔助的作品獲得著作權保護，人類創作者必須對初稿進行<strong>「實質性的修改、重繪與編排」</strong>。</p>
-                <p style="color: #00E5FF;">➡ 記住：AI 是工具，核心創意仍須來自於「人」。</p>
-            </section>
-        </div>
-    </div>
-    <!-- 引入 Reveal.js 腳本 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
-    <script>
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            center: true,
-            hash: true
-        });
-    </script>
-</body>
-</html>
+                <div class="slide-content">
+                    <h3>🎨 Midjourney 商用規範</h3>
+                    <ul>
+                        <li style="margin-bottom: 20px;"><strong style="color:#FF5722;">免費方案 (Free Tier)：</strong><br>不可商用！適用 CC BY-NC 4.0 授權，須標註原創作者。</li>
+                        <li style="margin-bottom: 20px;"><strong style="color:#4CAF50;">付費方案 (Pro/Standard)：</strong><br>擁有完整商業使用權（可印製商品、做
